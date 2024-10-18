@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos Logística</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/calculadora (1).png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="papelDeParede">
+        <img src="imagens/interior-large-distribution-warehouse-with-shelves-stacked-with-palettes-goods-ready-market.jpg" alt="">
+    </div>
+
+    <div class="tela">
+        
+        <h1>Cálculos</h1>
+
+        <div class="dados">
+            <div class="demanda">
+                <img src="imagens/jjk.png" alt="">
+                <div class="demandaDados">
+                    <label for="demanda">Demanda</label>
+                    <div class="demandaInputs">
+                        <input type="text" name="demnada" id="demanda">
+                        <select name="opcoes" id="opcoes">
+                            <option value="Opções" >Opções</option >
+                            <option value="mes">Mês</option>
+                            <option value="ano">Ano</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="leadTime">
+                <img src="imagens/jjk.png" alt="">
+                <div class="leadTimeDados">
+                    <label for="leadTime">Lead Time / dia<d/label>
+                    <input type="text" name="leadTime" id="leadTime">
+                </div>
+            </div> 
+            <div class="custoArmaz">
+                <img src="imagens/jjk.png" alt="">
+                <div class="custoArmazDados">
+                    <label for="custoArmaz">Custo de Armazenagem<d/label>
+                    <input type="text" name="custoArmaz" id="custoArmaz">
+                </div>
+            </div>   
+            <div class="precoCompra">
+                <img src="imagens/jjk.png" alt="">
+                <div class="precoCompraDados">
+                    <label for="precoCompra">Preço de Compra<d/label>
+                    <input type="text" name="precoCompra" id="precoCompra">
+                </div>
+            </div>   
+            <div class="custoPedido">
+                <img src="imagens/jjk.png" alt="">
+                <div class="custoPedidoDados">
+                    <label for="custoPedido">Custo de Pedido<d/label>
+                    <input type="text" name="custoPedido" id="custoPedido">
+                </div>
+            </div> 
+            <div class="fatorSeguranca">
+                <img src="imagens/jjk.png" alt="">
+                <div class="fatorSegurancaDados">
+                    <label for="fatorSeguranca">Fator de Segurança<d/label>
+                    <input type="text" name="fatorSeguranca" id="fatorSeguranca">
+                </div>
+            </div> 
+            <div class="desvioDemanda">
+                <img src="imagens/jjk.png" alt="">
+                <div class="desvioDemandaDados">
+                    <label for="desvioDemanda">Desvio da Demanda<d/label>
+                    <input type="text" name="desvioDemanda" id="desvioDemanda">
+                </div>
+            </div>
+            <div class="desvioTempo">
+                <img src="imagens/jjk.png" alt="">
+                <div class="desvioTempoDados">
+                    <label for="desvioTempo">Desvio do Tempo<d/label>
+                    <input type="text" name="desvioTempo" id="desvioTempo">
+                </div>
+            </div>
+            <div class="estoqueMedio">
+                <img src="imagens/jjk.png" alt="">
+                <div class="estoqueMedioDados">
+                    <label for="estoqueMedio">Estoque Médio<d/label>
+                    <h2 id="estoqueMedioResul"></h2>
+                </div>
+            </div>        
+            <div class="pontoDePedido">
+                <img src="imagens/jjk.png" alt="">
+                <div class="pontoDePedidoDados">
+                    <label for="pontoDePedido">Ponto de Pedido<d/label>
+                    <h2 id="pontoDePedidoResul"></h2>
+                </div>
+            </div>
+            <div class="demandaDiaria">
+                <img src="imagens/jjk.png" alt="">
+                <div class="demandaDiariaDados">
+                    <label for="demandaDiaria">Demanda Diária<d/label>
+                    <h2 id="demandaDiariaResul"></h2>
+                </div>
+            </div>
+            <div class="estoqueMinimo">
+                <img src="imagens/jjk.png" alt="">
+                <div class="estoqueMinimoDados">
+                    <label for="estoqueMinimo">Estoque Mínimo<d/label>
+                    <h2 id="estoqueMinimoResul"></h2>
+                </div>
+            </div>
+            <div class="estoqueMaximo">
+                <img src="imagens/jjk.png" alt="">
+                <div class="estoqueMaximoDados">
+                    <label for="estoqueMaximo">Estoque Máximo<d/label>
+                    <h2 id="estoqueMaximoResul"></h2>
+                </div>
+            </div>
+            <div class="loteDeCompra">
+                <img src="imagens/jjk.png" alt="">
+                <div class="loteDeCompraDados">
+                    <label for="loteDeCompra">Lote de Compra<d/label>
+                    <h2 id="loteDeCompraResul"></h2>
+                </div>
+            </div>
+            <div class="numeroPedidos">
+                <img src="imagens/jjk.png" alt="">
+                <div class="numeroPedidosDados">
+                    <label for="numeroPedidos">Número de pedidos<d/label>
+                    <h2 id="numeroPedidosResul"></h2>
+                </div>
+            </div>
+            <div class="custoManterEstoque">
+                <img src="imagens/jjk.png" alt="">
+                <div class="custoManterEstoqueDados">
+                    <label for="custoManterEstoque">Custo Total Estoque<d/label>
+                    <h2 id="custoManterEstoqueResul"></h2>
+                </div>
+            </div>
+            <div class="custoArmazenamento">
+                <img src="imagens/jjk.png" alt="">
+                <div class="custoArmazenamentoDados">
+                    <label for="custoArmazenamento">Custo Armazenagem<d/label>
+                    <h2 id="custoArmazenamentoResul"></h2>
+                </div>
+            </div>
+            <div class="custoDoPedido">
+                <img src="imagens/jjk.png" alt="">
+                <div class="custoDoPedidoDados">
+                    <label for="custoDoPedido">Custo de Pedido<d/label>
+                    <h2 id="custoDoPedidoResul"></h2>
+                </div>
+            </div>
+            <div class="estoqueDeSeguranca">
+                <img src="imagens/jjk.png" alt="">
+                <div class="estoqueDeSegurancaDados">
+                    <label for="estoqueDeSeguranca">Estoque de Segurança<d/label>
+                    <h2 id="estoqueDeSegurancaResul"></h2>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="calcular">
+        <button type="button" onclick="calcular()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Calcular
+        </button>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

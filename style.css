@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    box-sizing: border-box;
+}
+
+.papelDeParede img{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.tela {
+    height: 75vh;
+    width: 90vw;
+    top: 45%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  background-color: #000000;
+}
+
+.tela h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.dados {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90vw;
+    justify-content: center;
+}
+
+.dados img {
+    height: 100px;
+    width: 220px;
+    position: fixed;
+    z-index: -1;
+}
+
+.dados {
+    margin: 38px 18px;
+}
+
+.dados input, .dados select{
+    font-size: 14px;
+}
+
+.dados .demanda, .dados .leadTime, .dados .custoArmaz, .dados .precoCompra, .dados .custoPedido, .dados .fatorSeguranca, .dados .estoqueMedio, .dados .pontoDePedido, .dados .demandaDiaria, .dados .estoqueMinimo, .dados .estoqueMaximo, .dados .loteDeCompra, .dados .numeroPedidos, .dados .custoManterEstoque, .dados .custoArmazenamento, .dados .custoDoPedido, .dados .estoqueDeSeguranca, .dados .desvioDemanda, .dados .desvioTempo {
+    height: 120px;
+    width: 250px;
+    margin: 0px 10px 0px 10px;
+    flex: 0 1 200px;
+}
+
+.demandaDados, .leadTimeDados, .custoArmazDados, .precoCompraDados, .custoPedidoDados, .fatorSegurancaDados, .estoqueMedioDados, .pontoDePedidoDados, .demandaDiariaDados, .estoqueMinimoDados, .estoqueMaximoDados, .loteDeCompraDados, .numeroPedidosDados, .custoManterEstoqueDados, .custoArmazenamentoDados, .custoDoPedidoDados, .estoqueDeSegurancaDados, .desvioDemandaDados, .desvioTempoDados {
+    display: flex;
+    flex-direction: column;
+    margin: 34px 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.demandaInputs {
+    display: flex;
+}
+
+.demandaDados input, .demandaDados select {
+    margin: 3px 0px;
+    padding: 3px;
+}
+
+.demandaDados input {
+    width: 100px;
+    cursor: text;
+}
+
+.demandaDados select {
+    cursor: pointer;
+}
+
+
+.leadTimeDados input, .custoArmazDados input, .precoCompraDados input, .custoPedidoDados input, .fatorSegurancaDados input, .desvioDemandaDados input, .desvioTempoDados input {
+    margin: 3px 2px;
+    padding: 3px;
+    width: 187px;
+    cursor: text;
+    font-size: 14px;
+}
+
+.estoqueMedioDados h2, .pontoDePedidoDados h2, .demandaDiariaDados h2, .estoqueMinimoDados h2, .estoqueMaximoDados h2, .loteDeCompraDados h2, .numeroPedidosDados h2, .custoManterEstoqueDados h2, .custoArmazenamentoDados h2, .custoDoPedidoDados h2, .estoqueDeSegurancaDados h2 {
+    margin: 4px 2px;
+    width: 187px;
+    background: white;
+    border-radius: 10px;
+    padding: 1px 3px 1px 6px;
+    font-size: 18px;
+    border: 2px solid black;
+}
+
+
+
+.calcular {
+    top: 88%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.calcular button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    background: rgb(200, 200, 200);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .calcular button:hover {
+    color: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000,
+                0 0 10px #000000,
+                0 0 20px #000000,
+                0 0 30px #000000;
+  }
+  
+  .calcular button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .calcular button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000000);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .calcular button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000000);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .calcular button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #000000);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .calcular button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #000000);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
