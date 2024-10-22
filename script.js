@@ -160,12 +160,14 @@ function calcular() {
     const demanda = document.getElementById("demanda").value;
     const opcoes = document.getElementById("opcoes").value;
     const leadTime = document.getElementById("leadTime").value;
-    const custoArmaz = document.getElementById("custoArmaz").value;
+    let custoArmaz = document.getElementById("custoArmaz").value;
     const precoCompra = document.getElementById("precoCompra").value;
     const custoPedido = document.getElementById("custoPedido").value;
     const fatorSeguranca = document.getElementById("fatorSeguranca").value;
     const desvioDemanda = document.getElementById("desvioDemanda").value;
     const desvioTempo = document.getElementById("desvioTempo").value;
+
+    custoArmaz = custoArmaz / 100;
     
     calcularEstoqueMedio(demanda, opcoes);
     let estoqueMedio = calcularEstoqueMedio(demanda, opcoes);;
